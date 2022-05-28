@@ -1,0 +1,59 @@
+<head>
+</head>
+<body>
+<div class="top">
+  <h1> Happiness Dashboard</h1>
+  <h2> Create your poll! </h2>
+</div>
+
+ <!-- <form> 
+   <div class="form">
+    <table>
+      <tr><td>Introduce your question:</td><input type="text" id="poll" name="question" required placeholder="question"></tr>
+      <tr><td>Introduce the topic of your poll:</td><input type="text" id="topic" name="topic" required placeholder="topic"></tr>
+      <tr><td>Write the keywords of your poll:</td><input type="text" id="keywords" name="keywords" placeholder="keywords (optional)"></tr>
+      <tr><td>Choose an expiration date:<td><input type="date" id="exp_date" name="exp_date"></tr>
+
+    </table>
+  </div> 
+
+
+
+
+  <div class="container">
+    <button id="btn">
+      <p id="btnText">Submit</p>
+    </button>
+  </div>
+</form>  -->
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)" novalidate>
+  <div class="form-group">
+    <label for="question">Introduce your question:</label>
+    <div class="input-group">
+      <input type="text" id="question" name="question"  ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="topic">Introduce the topic of your poll:</label>
+    <div class="input-group">
+      <input id="topic" name="topic" type="text" ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="keywords">Write the keywords of your poll:</label>
+    <div class="input-group">
+      <input id="keywords" name="keywords" type="text" ngModel>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Choose an expiration date:</label>
+    <div class="input-group">
+      <input id="expiration_date" name="expiration_date"  type="date" ngModel>
+    </div>
+  </div>
+  <div class="border text-center">
+    <button type="submit">Submit</button>
+    </div>
+</form>
+
+</body>
